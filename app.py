@@ -280,7 +280,7 @@ html_code = """
 
             <div class="final-message">
                 <h2>✨ Happy 22nd Birthday, Amaka! ✨</h2>
-                <p>You are a true girlfriend! From our first chat to now, your genuine heart has shone through. This is your year to shine brighter than ever — 22 looks perfect on you! 💜</p>
+                <p>You are a true girlfriend! From the moment you picked an interest in me from our little conversation on groundfloor at the Block Hostel and one time during Unserious, I knew I could give my heart out because you are A VERY GENUINE PERSON, not easy to come by. This is your year to shine brighter than ever. God has amazing things in store for you. Keep cooking up greatness, keep that beautiful smile glowing, and keep being the absolute gem that you are. 22 looks perfect on you! 💜</p>
             </div>
         </div>
     </div>
