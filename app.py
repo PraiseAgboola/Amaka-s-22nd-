@@ -19,7 +19,7 @@ header {visibility: hidden;}
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# The complete HTML code
+# Dreamy Universe HTML
 html_code = """
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +27,10 @@ html_code = """
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amaka's Universe of 22</title>
+
+    <!-- Royal fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -35,12 +39,18 @@ html_code = """
         }
 
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
             background: #000;
             color: #fff;
         }
 
+        h1, h2, .intro-title, .main-title {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1.5px;
+        }
+
+        /* Intro screen */
         .intro-screen {
             position: fixed;
             top: 0;
@@ -62,59 +72,57 @@ html_code = """
         }
 
         .intro-title {
-            font-size: 3.5rem;
-            background: linear-gradient(135deg, #FFD700, #ffffff, #c8a8e9, #b695d6);
+            font-size: 3.2rem;
+            background: linear-gradient(135deg, #FFD700, #ffffff, #c8a8e9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1rem;
             text-align: center;
             animation: shimmer 3s infinite;
-            font-weight: bold;
-            letter-spacing: 3px;
+            font-weight: 700;
+            text-transform: uppercase;
         }
 
         .intro-subtitle {
-            font-size: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
             color: #c8a8e9;
             margin-bottom: 3rem;
             text-align: center;
             animation: glow 2s infinite;
+            font-style: italic;
         }
 
         @keyframes shimmer {
             0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(1.02); }
+            50% { opacity: 0.9; transform: scale(1.03); }
         }
 
         @keyframes glow {
-            0%, 100% { text-shadow: 0 0 20px rgba(200, 168, 233, 0.5); }
-            50% { text-shadow: 0 0 40px rgba(200, 168, 233, 0.8); }
+            0%, 100% { text-shadow: 0 0 20px rgba(200,168,233,0.5); }
+            50% { text-shadow: 0 0 40px rgba(200,168,233,0.9); }
         }
 
         .enter-btn {
-            padding: 1.5rem 3.5rem;
-            font-size: 1.3rem;
-            background: linear-gradient(135deg, #c8a8e9, #b695d6, #FFD700);
-            border: 2px solid #ffffff;
+            padding: 1.2rem 2.8rem;
+            font-size: 1.2rem;
+            background: linear-gradient(135deg, #c8a8e9, #FFD700);
+            border: 2px solid #fff;
             border-radius: 50px;
             color: white;
             cursor: pointer;
-            transition: all 0.4s;
+            transition: all 0.4s ease;
             font-weight: bold;
-            letter-spacing: 3px;
             text-transform: uppercase;
-            box-shadow: 0 0 30px rgba(200, 168, 233, 0.6);
+            box-shadow: 0 0 25px rgba(200,168,233,0.6);
         }
 
         .enter-btn:hover {
-            transform: scale(1.15) translateY(-5px);
-            box-shadow: 0 0 50px rgba(255, 215, 0, 0.8);
-            background: linear-gradient(135deg, #FFD700, #c8a8e9, #ffffff);
+            transform: scale(1.1) translateY(-4px);
+            box-shadow: 0 0 40px rgba(255,215,0,0.8);
         }
 
+        /* Universe */
         .universe-container {
-            position: relative;
             width: 100%;
             min-height: 100vh;
             background: radial-gradient(ellipse at center, #2d1b4e 0%, #000000 100%);
@@ -123,10 +131,8 @@ html_code = """
 
         .stars {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             pointer-events: none;
         }
 
@@ -137,213 +143,122 @@ html_code = """
             animation: twinkle 3s infinite;
         }
 
-        .star.gold {
-            background: #FFD700;
-        }
-
-        .star.lilac {
-            background: #c8a8e9;
-        }
-
         @keyframes twinkle {
-            0%, 100% { opacity: 0.2; transform: scale(1); }
+            0%, 100% { opacity: 0.3; transform: scale(1); }
             50% { opacity: 1; transform: scale(1.5); }
         }
 
         .content-wrapper {
             position: relative;
             z-index: 10;
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            max-width: 1100px;
+            margin: auto;
         }
 
         .main-title {
-            font-size: 4rem;
+            font-size: 3rem;
             text-align: center;
-            margin-bottom: 1rem;
             background: linear-gradient(135deg, #FFD700, #ffffff, #c8a8e9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
+            margin-bottom: 1rem;
             animation: float 4s ease-in-out infinite;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .subtitle {
-            text-align: center;
-            font-size: 1.5rem;
-            color: #c8a8e9;
-            margin-bottom: 3rem;
-            font-style: italic;
+            font-weight: 700;
         }
 
         @keyframes float {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+            50% { transform: translateY(-15px); }
         }
 
-        .music-reminder {
-            background: rgba(200, 168, 233, 0.2);
-            border: 2px solid #c8a8e9;
-            border-radius: 20px;
-            padding: 2rem;
+        .subtitle {
             text-align: center;
-            margin-bottom: 3rem;
-            backdrop-filter: blur(10px);
+            font-size: 1.3rem;
+            color: #c8a8e9;
+            font-style: italic;
+            margin-bottom: 2rem;
         }
 
-        .music-reminder h3 {
-            color: #FFD700;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .music-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-
-        .music-btn {
-            padding: 1rem 2rem;
-            background: linear-gradient(135deg, #c8a8e9, #FFD700);
-            border: none;
-            border-radius: 30px;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .music-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
-        }
-
+        /* Affirmation Cards */
         .affirmation-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
         .affirmation-card {
-            background: linear-gradient(135deg, rgba(200, 168, 233, 0.15), rgba(255, 215, 0, 0.1));
-            backdrop-filter: blur(15px);
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: linear-gradient(145deg, rgba(200,168,233,0.15), rgba(255,215,0,0.1));
+            border: 1.5px solid rgba(255,255,255,0.3);
             border-radius: 25px;
-            padding: 2.5rem;
-            opacity: 0;
-            transform: translateY(50px) rotateX(20deg);
-            animation: slideUp 1s forwards;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(200, 168, 233, 0.3);
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(200,168,233,0.25);
+            text-align: center;
+            backdrop-filter: blur(12px);
+            transition: all 0.4s ease;
+            animation: fadeIn 1s ease forwards;
         }
 
-        .affirmation-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, 
-                transparent, 
-                rgba(255, 215, 0, 0.2), 
-                transparent,
-                rgba(200, 168, 233, 0.2),
-                transparent);
-            animation: shine 4s infinite;
+        .affirmation-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 0 40px rgba(255,215,0,0.4);
+            border-color: rgba(255,215,0,0.6);
         }
 
-        @keyframes shine {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        @keyframes slideUp {
-            to {
-                opacity: 1;
-                transform: translateY(0) rotateX(0);
-            }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .card-number {
-            font-size: 3.5rem;
+            font-size: 2rem;
             font-weight: bold;
-            background: linear-gradient(135deg, #FFD700, #ffffff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
-        }
-
-        .card-text {
-            font-size: 1.2rem;
-            line-height: 1.9;
-            color: #ffffff;
-            position: relative;
-            z-index: 1;
+            color: #FFD700;
+            margin-bottom: 0.5rem;
         }
 
         .icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            animation: bounce 2s infinite;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
         }
 
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        .card-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #fff;
+            line-height: 1.7;
         }
 
         .final-message {
-            margin-top: 4rem;
-            padding: 3rem;
-            background: linear-gradient(135deg, rgba(200, 168, 233, 0.3), rgba(255, 215, 0, 0.2));
-            border: 3px solid #FFD700;
-            border-radius: 30px;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(200,168,233,0.2), rgba(255,215,0,0.15));
+            border-radius: 25px;
             text-align: center;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 0 50px rgba(200, 168, 233, 0.5);
+            border: 2px solid rgba(255,215,0,0.5);
         }
 
         .final-message h2 {
-            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
             background: linear-gradient(135deg, #FFD700, #ffffff, #c8a8e9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
 
         .final-message p {
-            font-size: 1.4rem;
-            line-height: 2;
-            color: #ffffff;
+            font-size: 1.1rem;
+            color: #fff;
+            line-height: 1.8;
         }
 
         @media (max-width: 768px) {
-            .main-title {
-                font-size: 2.5rem;
-            }
-            .intro-title {
-                font-size: 2rem;
-            }
-            .intro-subtitle {
-                font-size: 1.5rem;
-            }
-            .affirmation-grid {
-                grid-template-columns: 1fr;
-            }
+            .main-title { font-size: 2rem; }
+            .intro-title { font-size: 2rem; }
+            .affirmation-card { padding: 1.5rem; }
+            .card-text { font-size: 1rem; }
         }
     </style>
 </head>
@@ -354,31 +269,18 @@ html_code = """
         <button class="enter-btn" onclick="enterUniverse()">Open Your Universe</button>
     </div>
 
-    <div class="universe-container" style="display: none;" id="universe">
+    <div class="universe-container" style="display:none;" id="universe">
         <div class="stars" id="starsContainer"></div>
-        
+
         <div class="content-wrapper">
-            <h1 class="main-title">🌟 AMAKA'S UNIVERSE OF 22 🌟</h1>
+            <h1 class="main-title">🌟 Amaka’s Universe of 22 🌟</h1>
             <p class="subtitle">22 Affirmations for Your Beautiful Journey Ahead</p>
 
-            <div class="music-reminder">
-                <h3>🎵 First, Play "Hold On" by TEMS 🎵</h3>
-                <p style="color: #ffffff; margin: 1rem 0;">Open one of these links in a new tab and let the music sweep you away...</p>
-                <div class="music-links">
-                    <a href="https://www.youtube.com/results?search_query=tems+gems" target="_blank" class="music-btn">
-                        ▶️ Play on YouTube
-                    </a>
-                    <a href="https://open.spotify.com/search/tems%20gems" target="_blank" class="music-btn">
-                        ▶️ Play on Spotify
-                    </a>
-                </div>
-            </div>
-            
             <div class="affirmation-grid" id="affirmationGrid"></div>
 
             <div class="final-message">
                 <h2>✨ Happy 22nd Birthday, Amaka! ✨</h2>
-                <p> You are a true girlfriend! From the moment you picked an interest in me from our little conversation on groundfloor at the Block Hostel and one time during Unserious, I knew I could give my heart out because you are A VERY GENUINE PERSON, not easy to come by. This is your year to shine brighter than ever. God has amazing things in store for you. Keep cooking up greatness, keep that beautiful smile glowing, and keep being the absolute gem that you are. 22 looks perfect on you! </p>
+                <p>You are a true girlfriend! From our first chat to now, your genuine heart has shone through. This is your year to shine brighter than ever — 22 looks perfect on you! 💜</p>
             </div>
         </div>
     </div>
@@ -388,9 +290,6 @@ html_code = """
             { icon: "👑", text: "Amaka, you are a queen, walking in grace and beauty every single day" },
             { icon: "✨", text: "Your smile lights up every room - it's absolutely beautiful and infectious" },
             { icon: "🙏", text: "God's favor surrounds you like a shield. His plans for you are perfect" },
-            { icon: "👗", text: "Your style is impeccable - those shoes, bags, and wigs? Always on point!" },
-            { icon: "🍳", text: "Your cooking feeds ME and brings pure joy to everyone who tastes it" },
-            { icon: "🎵", text: "Like TEMS, your presence and energy command attention and respect" },
             { icon: "💎", text: "You are a rare gem in this world - irreplaceable and precious" },
             { icon: "🌟", text: "This year at 22, everything you touch will turn to gold" },
             { icon: "💪", text: "Your strength and resilience inspire everyone blessed to know you" },
@@ -402,7 +301,7 @@ html_code = """
             { icon: "💫", text: "You are exactly where you need to be. Trust the journey" },
             { icon: "🦋", text: "Watch yourself transform into the woman you were destined to be" },
             { icon: "🌺", text: "Your presence is a precious gift to this world. Never forget that" },
-            { icon: "🔥", text: "You are unstoppable, unbreakable, and absolutely unforgettable" },
+            { icon: "🔥", text: "You are unstoppable, unbreakable, and unforgettable" },
             { icon: "🎨", text: "Your creativity and talent know absolutely no bounds" },
             { icon: "🌙", text: "Peace, joy, and divine favor follow you everywhere you go" },
             { icon: "⭐", text: "You are loved beyond measure by God" },
@@ -411,22 +310,14 @@ html_code = """
 
         function createStars() {
             const container = document.getElementById('starsContainer');
-            const colors = ['white', 'gold', 'lilac'];
-            const sizes = [2, 3, 4];
-            
-            for (let i = 0; i < 250; i++) {
+            for (let i = 0; i < 200; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
-                const colorClass = colors[Math.floor(Math.random() * colors.length)];
-                if (colorClass !== 'white') star.classList.add(colorClass);
-                
-                const size = sizes[Math.floor(Math.random() * sizes.length)];
-                star.style.width = size + 'px';
-                star.style.height = size + 'px';
+                const size = Math.random() * 3 + 1;
+                star.style.width = star.style.height = size + 'px';
                 star.style.left = Math.random() * 100 + '%';
                 star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 3 + 's';
-                star.style.animationDuration = (2 + Math.random() * 3) + 's';
+                star.style.animationDelay = Math.random() * 2 + 's';
                 container.appendChild(star);
             }
         }
@@ -434,27 +325,25 @@ html_code = """
         function enterUniverse() {
             document.getElementById('introScreen').classList.add('hidden');
             document.getElementById('universe').style.display = 'block';
-            
             setTimeout(() => {
                 createStars();
                 displayAffirmations();
-            }, 500);
+            }, 600);
         }
 
         function displayAffirmations() {
             const grid = document.getElementById('affirmationGrid');
-            affirmations.forEach((affirmation, index) => {
+            affirmations.forEach((a, i) => {
                 setTimeout(() => {
                     const card = document.createElement('div');
                     card.className = 'affirmation-card';
-                    card.style.animationDelay = (index * 0.15) + 's';
                     card.innerHTML = `
-                        <div class="card-number">${index + 1}</div>
-                        <div class="icon">${affirmation.icon}</div>
-                        <div class="card-text">${affirmation.text}</div>
+                        <div class="card-number">${i + 1}</div>
+                        <div class="icon">${a.icon}</div>
+                        <div class="card-text">${a.text}</div>
                     `;
                     grid.appendChild(card);
-                }, index * 300);
+                }, i * 200);
             });
         }
     </script>
@@ -462,5 +351,4 @@ html_code = """
 </html>
 """
 
-# Display the HTML
-components.html(html_code, height=800, scrolling=True)
+components.html(html_code, height=1000, scrolling=True)
