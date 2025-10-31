@@ -287,25 +287,7 @@ html_code = """
 
     <script>
         const affirmations = [
-            { icon: "👑", text: "Amaka, you are a queen, walking in grace and beauty every single day" },
-            { icon: "✨", text: "Your smile lights up every room - it's absolutely beautiful and infectious" },
-            { icon: "🙏", text: "God's favor surrounds you like a shield. His plans for you are perfect" },
-            { icon: "💎", text: "You are a rare gem in this world - irreplaceable and precious" },
-            { icon: "🌟", text: "This year at 22, everything you touch will turn to gold" },
-            { icon: "💪", text: "Your strength and resilience inspire everyone blessed to know you" },
-            { icon: "❤️", text: "You deserve all the fine things in life - including a FINE man both in beauty and character!" },
-            { icon: "🌸", text: "Your beauty radiates from deep within and shines outward" },
-            { icon: "📖", text: "Your faith will move mountains this year. Watch God work wonders" },
-            { icon: "🎯", text: "Every goal you set, you WILL achieve. Success is yours" },
-            { icon: "🌈", text: "Your future is bright, blessed, and overflowing with abundance" },
-            { icon: "💫", text: "You are exactly where you need to be. Trust the journey" },
-            { icon: "🦋", text: "Watch yourself transform into the woman you were destined to be" },
-            { icon: "🌺", text: "Your presence is a precious gift to this world. Never forget that" },
-            { icon: "🔥", text: "You are unstoppable, unbreakable, and unforgettable" },
-            { icon: "🎨", text: "Your creativity and talent know absolutely no bounds" },
-            { icon: "🌙", text: "Peace, joy, and divine favor follow you everywhere you go" },
-            { icon: "⭐", text: "You are loved beyond measure by God" },
-            { icon: "🎂", text: "22 looks absolutely STUNNING on you, Amaka! This is YOUR year!" }
+           { icon: "👑", text: "Amaka, you are a queen, walking in grace and beauty every single day" }, { icon: "✨", text: "Your smile lights up every room - it's absolutely beautiful and infectious" }, { icon: "🙏", text: "God's favor surrounds you like a shield. His plans for you are perfect" }, { icon: "👗", text: "Your style is impeccable - those shoes, bags, and wigs? Always on point!" }, { icon: "🍳", text: "Your cooking feeds ME and brings pure joy to everyone who tastes it" }, { icon: "🎵", text: "Like TEMS, your presence and energy command attention and respect" }, { icon: "💎", text: "You are a rare gem in this world - irreplaceable and precious" }, { icon: "🌟", text: "This year at 22, everything you touch will turn to gold" }, { icon: "💪", text: "Your strength and resilience inspire everyone blessed to know you" }, { icon: "❤️", text: "You deserve all the fine things in life - including a FINE man both in beauty and character!" }, { icon: "🌸", text: "Your beauty radiates from deep within and shines outward" }, { icon: "📖", text: "Your faith will move mountains this year. Watch God work wonders" }, { icon: "🎯", text: "Every goal you set, you WILL achieve. Success is yours" }, { icon: "🌈", text: "Your future is bright, blessed, and overflowing with abundance" }, { icon: "💫", text: "You are exactly where you need to be. Trust the journey" }, { icon: "🦋", text: "Watch yourself transform into the woman you were destined to be" }, { icon: "🌺", text: "Your presence is a precious gift to this world. Never forget that" }, { icon: "🔥", text: "You are unstoppable, unbreakable, and absolutely unforgettable" }, { icon: "🎨", text: "Your creativity and talent know absolutely no bounds" }, { icon: "🌙", text: "Peace, joy, and divine favor follow you everywhere you go" }, { icon: "⭐", text: "You are loved beyond measure by God" }, { icon: "🎂", text: "22 looks absolutely STUNNING on you, Amaka! This is YOUR year!" }
         ];
 
         function createStars() {
